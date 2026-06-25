@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nature Nest Nursery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}hshfnmxcvnjsdhgkfkh
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5fff2;
+    overflow-x:hidden;
+}
+
+/* WEBSITE */
+
+#website{
+    display:none;
+}
+
+/* LOGIN */
+
+
+.login-section{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+    135deg,
+    #0f2027,
+    #203a43,
+    #2c5364
+    );
+    overflow:hidden;
+}
+
+.login-section::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#52d017;
+    border-radius:50%;
+    top:-150px;
+    left:-150px;
+    filter:blur(120px);
+}
+
+.login-section::after{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:#00ffcc;
+    border-radius:50%;
+    bottom:-100px;
+    right:-100px;
+    filter:blur(120px);
+}
+
+.login-form{
+    width:380px;
+    padding:40px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    z-index:10;
+}
+
+.login-form h2{
+    color:white;
+    margin-bottom:25px;
+    font-size:30px;
+}
+
+.login-form input{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    outline:none;
+}
+
+.login-form button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    margin-top:15px;
+    background:#52d017;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login-form button:hover{
+    transform:scale(1.05);
+}
+
+.create-text{
+    color:white;
+    margin-top:15px;
+}
+
+
+
+.navbar{
+    width:100%;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#2d7d2f;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+    margin-left:auto;
+    margin-right:15px; /* closer to profile */
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:500;
+}
+.search-section{
+    text-align:center;
+    padding:100px 20px 20px;
+}
+
+#searchInput{
+    width:400px;
+    max-width:90%;
+    padding:12px;
+    border:2px solid #2d7d2f;
+    border-radius:25px;
+    font-size:16px;
+}
+.profile{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:2px solid white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+/* LOGO */
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:700;
+}
+
+/* RIGHT SIDE */
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+/* NAV LINKS */
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#b7ff8a;
+}
+
+/* PROFILE */
+
+.profile{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:2px solid white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+.profile i{
+    color:white;
+    font-size:18px;
+}
+.profile{
+    position:relative;
+    cursor:pointer;
+}
+
+.profile-menu{
+    display:none;
+    position:absolute;
+    top:55px;
+    right:0;
+    width:200px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    overflow:hidden;
+}
+
+.profile-menu a{
+    display:block;
+    padding:12px;
+    text-decoration:none;
+    color:black;
+}
+
+.profile-menu a:hover{
+    background:#f5fff2;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background-size:cover;
+    background-position:center;
+    animation:slider 20s infinite;
+}
+
+.hero-content{
+    color:white;
+}
+
+.hero-content h1{
+    font-size:70px;
+    text-shadow:2px 2px 10px black;
+}
+
+.hero-content p{
+    font-size:24px;
+    margin:20px 0;
+}
+
+.hero-content button{
+    padding:15px 30px;
+    border:none;
+    border-radius:8px;
+    background:#52d017;
+    color:white;
+    cursor:pointer;
+}
+
+@keyframes slider{
+
+0%{
+background-image:url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735');
+}
+
+50%{
+background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+}
+
+100%{
+background-image:url('https://images.unsplash.com/photo-1512428813834-c702c7702b78');
+}
+
+}
+
+/* CATEGORY */
+
+.categories{
+    padding:80px 40px;
+}
+
+.main-title{
+    text-align:center;
+    color:#1f5f2c;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.category-boxes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.category-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+}
+
+.category-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.category-card h2{
+    text-align:center;
+    padding:15px;
+    color:#1f5f2c;
+}
+
+/* PLANT PRODUCTS */
+.dynamic-plants{
+    padding:40px;
+}
+
+#plantContainer{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.plant-card{
+    width:220px;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.plant-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.plant-card-content{
+    padding:15px;
+}
+
+.price{
+    color:green;
+    margin:10px 0;
+}
+
+.plant-card button{
+    width:100%;
+    padding:10px;
+    background:#2d7d2f;
+    color:white;
+    border:none;
+}
+
+/* GALLERY */
+
+.gallery{
+    padding:80px 40px;
+}
+
+.gallery-title{
+    text-align:center;
+    color:#1f5f2c;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.gallery-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.gallery-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.gallery-card h3{
+    text-align:center;
+    padding:15px;
+}
+/* REVIEW SECTION */
+
+.reviews-page{
+    padding:120px 40px;
+    text-align:center;
+}
+
+.review-card{
+    background:white;
+    width:350px;
+    margin:20px auto;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stars{
+    color:gold;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+
+/* STATS */
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+    margin-top:60px;
+}
+
+.stat-box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    min-width:180px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-box h2{
+    color:#2d7d2f;
+    font-size:40px;
+}
+
+.stat-box p{
+    margin-top:10px;
+}
+
+
+
+/* ADMIN */
+
+.admin{
+    padding:80px 40px;
+}
+
+.admin-title{
+    text-align:center;
+    color:#1f5f2c;
+    margin-bottom:30px;
+}
+
+.admin-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.admin-card{
+    width:300px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+}
+
+.admin-card input,
+.admin-card button{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+    padding:60px 20px;
+}
+
+/* WHATSAPP */
+
+.whatsapp-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+}
+
+.whatsapp-btn img{
+    width:60px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1f5f2c;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- LOGIN SECTION -->
+<section class="login-section">
+
+    <form class="login-form">
+
+        <h2>🌿 Nature Nest</h2>
+<p style="color:white;">
+Welcome Back Plant Lover
+</p>
+        <input type="email" placeholder="Email" required>
+
+        <input type="password" placeholder="Password" required>
+
+        <button type="button" onclick="login()">
+            Login
+        </button>
+
+        <p class="create-text">
+            Don't have an account?
+        </p>
+
+        <button type="button" class="create-btn">
+            Create Account
+        </button>
+
+    </form>
+
+</section>
+
+<!-- WEBSITE START -->
+<div id="website" style="display:none;">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Nature Nest
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#plants">Plants</a></li>
+         <li><a href="admin.html">Admin</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="profile">
+
+    <div onclick="toggleProfile()">
+        👤
+    </div>
+
+    <div id="profileMenu" class="profile-menu">
+
+        <a href="#">🌿 My Plants</a>
+        <a href="#">📦 My Orders</a>
+        <a href="#">❤️ Wishlist</a>
+        <a href="#">🛒 Cart</a>
+        <a href="#">⭐ Reviews</a>
+        <a href="#">🏠 Address</a>
+        <a href="#">⚙️ Settings</a>
+        <a href="#">🚪 Logout</a>
+
+    </div>
+   
+</div>
+
+    </nav>
+
+    
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Nature Nest Nursery</h1>
+
+            <p>
+                Fresh Plants • Beautiful Flowers • Green Living
+            </p>
+
+            <button>
+                Shop Now
+            </button>
+
+        </div>
+
+    </section>
+    <section class="search-section">
+
+<input type="text"
+id="searchInput"
+placeholder="🔍 Search plants..."
+onkeyup="searchPlants()">
+</section>
+    
+
+
+    <!-- PLANTS -->
+    <section class="categories" id="plants">
+
+        <h1 class="main-title">
+            Plant Categories
+        </h1>
+
+        <div class="category-boxes">
+
+            <div class="category-card" onclick="showPlants('indoor')">
+                <img src="https://images.pexels.com/photos/1084199/pexels-photo-1084199.jpeg">
+                <h2>Indoor Plants</h2>
+            </div>
+
+            <div class="category-card" onclick="showPlants('outdoor')">
+                <img src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg">
+                <h2>Outdoor Plants</h2>
+            </div>
+
+            <div class="category-card" onclick="showPlants('seasonal')">
+                <img src="https://images.pexels.com/photos/46216/sunflower-flowers-bright-yellow-46216.jpeg">
+                <h2>Seasonal Plants</h2>
+            </div>
+
+            <div class="category-card" onclick="showPlants('rare')">
+                <img src="https://images.pexels.com/photos/6208086/pexels-photo-6208086.jpeg">
+                <h2>Rare Plants</h2>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DYNAMIC PLANTS -->
+    <section class="dynamic-plants">
+        <div id="plantContainer"></div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+
+        <h1 class="gallery-title">Plant Gallery</h1>
+
+        <div class="gallery-container">
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411" alt="Pots">
+                <h3>Pots</h3>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735" alt="Manure">
+                <h3>Organic Manure</h3>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946" alt="Flowers">
+                <h3>Flower Plants</h3>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78" alt="Seeds">
+                <h3>Seeds</h3>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://picsum.photos/300/200" alt="Gardening Tools">
+                <h3>Gardening Tools</h3>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="reviews">
+<button onclick="location.href='review.html'">
+Read Reviews
+</button>
+<h1>Customer Reviews</h1>
+
+<div class="review-container">
+
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>"Healthy plants and excellent service."</p>
+<h4>- Rahul</h4>
+</div>
+
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>"Best nursery website I've used."</p>
+<h4>- Priya</h4>
+</div>
+
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>"Fast delivery and beautiful plants."</p>
+<h4>- Aman</h4>
+</div>
+
+</div>
+
+</section>
+<section class="stats">
+
+<div class="stat">
+<h1>500+</h1>
+<p>Plants Sold</p>
+</div>
+
+<div class="stat">
+<h1>300+</h1>
+<p>Happy Customers</p>
+</div>
+
+<div class="stat">
+<h1>50+</h1>
+<p>Plant Varieties</p>
+</div>
+
+<div class="stat">
+<h1>5+</h1>
+<p>Years Experience</p>
+</div>
+
+</section>
+
+
+<!-- PAYMENT -->
+<section class="payment">
+
+    <div style="text-align:center;padding:50px;">
+
+        <button id="payBtn"
+        style="
+        padding:15px 35px;
+        background:#52d017;
+        color:white;
+        border:none;
+        border-radius:8px;
+        font-size:18px;
+        cursor:pointer;
+        ">
+            Pay Now
+        </button>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+    <h1>Contact Us</h1>
+
+    <p>Email: naturenest@gmail.com</p>
+
+    <p>Phone: +91 9876543210</p>
+
+    <p>Location: Purulia, India</p>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 Nature Nest Nursery | All Rights Reserved
+    </p>
+
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/919876543210"
+class="whatsapp-btn">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+    alt="WhatsApp">
+
+</a>
+
+</div>
+
+<!-- JAVASCRIPT FILE -->
+<script src="script.js"></script>
+
+</body>
+</html>
+<script>
+
+
+// LOGIN
+
+function login(){
+
+    document.querySelector(".login-section").style.display="none";
+
+    document.getElementById("website").style.display="block";
+}
+function toggleProfile(){
+
+    let menu = document.getElementById("profileMenu");
+
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    }else{
+        menu.style.display = "block";
+    }
+}
+/* CART */
+
+let cart = [];
+
+function addToCart(name, price){
+
+    cart.push({
+        name:name,
+        price:price
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(name + " added to cart!");
+}
+function searchPlants(){
+
+let input =
+document.getElementById("searchInput")
+.value.toLowerCase();
+
+let cards =
+document.querySelectorAll(".plant-card");
+
+cards.forEach(function(card){
+
+let name =
+card.querySelector("h2")
+.innerText.toLowerCase();
+
+if(name.includes(input)){
+    card.style.display = "block";
+}else{
+    card.style.display = "none";
+}
+
+});
+
+}
+/* BUY NOW */
+
+function showPlants(category){
+
+const container = document.getElementById("plantContainer");
+
+container.innerHTML = "";
+
+plants[category].forEach(plant => {
+
+container.innerHTML += `
+
+<div class="plant-card">
+
+    <img src="${plant.image}" alt="${plant.name}">
+
+    <div class="plant-card-content">
+
+        <h2>${plant.name}</h2>
+
+        <p class="price">${plant.price}</p>
+
+        <div class="product-buttons">
+
+            <button class="buy-btn">
+                Buy Now
+            </button>
+
+            <button class="cart-btn"
+            onclick="addToCart('${plant.name}','${plant.price}')">
+                🛒 Cart
+            </button>
+
+            <button class="fav-btn">
+                ❤️
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+`;
+
+});
+
+}
+/* PLANT DATA */
+
+const plants = {
+
+indoor:[
+
+{
+name:"Snake Plant",
+price:"₹499",
+image:"https://images.pexels.com/photos/2123482/pexels-photo-2123482.jpeg"
+},
+
+{
+name:"Money Plant",
+price:"₹299",
+image:"https://images.pexels.com/photos/1084199/pexels-photo-1084199.jpeg"
+},
+
+{
+name:"Peace Lily",
+price:"₹599",
+image:"https://images.pexels.com/photos/6208086/pexels-photo-6208086.jpeg"
+},
+
+{
+name:"Spider Plant",
+price:"₹399",
+image:"https://images.pexels.com/photos/5699665/pexels-photo-5699665.jpeg"
+},
+
+{
+name:"Rubber Plant",
+price:"₹799",
+image:"https://images.pexels.com/photos/4751978/pexels-photo-4751978.jpeg"
+}
+
+],
+
+outdoor:[
+
+{
+name:"Rose Plant",
+price:"₹699",
+image:"https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg"
+},
+
+{
+name:"Hibiscus",
+price:"₹599",
+image:"https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg"
+},
+
+{
+name:"Bougainvillea",
+price:"₹899",
+image:"https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg"
+},
+
+{
+name:"Jasmine",
+price:"₹499",
+image:"https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg"
+},
+
+{
+name:"Lotus",
+price:"₹999",
+image:"https://images.pexels.com/photos/36753/flower-purple-lical-blosso.jpg"
+}
+
+],
+
+seasonal:[
+
+{
+name:"Sunflower",
+price:"₹299",
+image:"https://images.pexels.com/photos/46216/sunflower-flowers-bright-yellow-46216.jpeg"
+},
+
+{
+name:"Marigold",
+price:"₹199",
+image:"https://images.pexels.com/photos/1931143/pexels-photo-1931143.jpeg"
+},
+
+{
+name:"Petunia",
+price:"₹249",
+image:"https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+},
+
+{
+name:"Dahlia",
+price:"₹349",
+image:"https://images.pexels.com/photos/133464/pexels-photo-133464.jpeg"
+},
+
+{
+name:"Pansy",
+price:"₹299",
+image:"https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg"
+}
+
+],
+
+rare:[
+
+{
+name:"Monstera Deliciosa",
+price:"₹1499",
+image:"https://images.pexels.com/photos/6208086/pexels-photo-6208086.jpeg"
+},
+
+{
+name:"Black ZZ Plant",
+price:"₹1999",
+image:"https://images.pexels.com/photos/2123482/pexels-photo-2123482.jpeg"
+},
+
+{
+name:"Pink Princess",
+price:"₹2499",
+image:"https://images.pexels.com/photos/4751978/pexels-photo-4751978.jpeg"
+},
+
+{
+name:"Raven Plant",
+price:"₹1799",
+image:"https://images.pexels.com/photos/5699665/pexels-photo-5699665.jpeg"
+},
+
+{
+name:"String Of Pearls",
+price:"₹1299",
+image:"https://images.pexels.com/photos/1084199/pexels-photo-1084199.jpeg"
+}
+
+]
+
+};
+
+/* SHOW PLANTS */
+
+function showPlants(category){
+
+const container =
+document.getElementById("plantContainer");
+
+container.innerHTML = "";
+
+plants[category].forEach(function(plant){
+
+container.innerHTML += `
+
+<div class="plant-card">
+
+<img src="${plant.image}" alt="${plant.name}">
+
+<div class="plant-card-content">
+
+<h2>${plant.name}</h2>
+
+<p class="price">${plant.price}</p>
+
+<button onclick="addToCart('${plant.name}','${plant.price}')">
+Add To Cart
+</button>
+
+<br><br>
+
+<button onclick="buyNow('${plant.name}','${plant.price}')">
+Buy Now
+</button>
+
+<br><br>
+
+<button onclick="addToFavorite('${plant.name}')">
+❤️ Favorite
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+</script>
+
+
+
+</script>
+
+</body>
+</html>
